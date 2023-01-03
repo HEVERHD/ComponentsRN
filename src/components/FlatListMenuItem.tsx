@@ -16,7 +16,7 @@ export default function FlatListMenuItem({ menuItem }: Props) {
             activeOpacity={0.7}
             onPress={() => navigation.navigate(menuItem.component)}>
             <View style={styles.container}>
-                <Icon name={menuItem.icon} size={25} color="#5856D6" />
+                <Icon name={menuItem.icon} size={25} color="#0250aa" />
 
                 <Text style={styles.textItem}>{menuItem.name}</Text>
 
@@ -25,7 +25,7 @@ export default function FlatListMenuItem({ menuItem }: Props) {
                 <Icon
                     name="chevron-forward-outline"
                     size={25}
-                    color="#5856D6"
+                    color="#0250aa"
                 />
             </View>
         </TouchableOpacity>
@@ -40,5 +40,6 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         fontSize: 19,
         fontWeight: 'bold',
+        color: '#cacaca',
     },
 });
