@@ -38,4 +38,15 @@ export const menuItems: MenuItem[] = [
         icon: 'list-outline',
         component: 'CustomListScreen',
     },
+    {
+        name: 'Modal Screen',
+        icon: 'copy-outline',
+        component: 'ModalScreen',
+    },
+
+    {
+        name: 'Infinite Scroll',
+        icon: 'download-outline',
+        component: 'InfiniteScrollscreen',
+    },
 ];
