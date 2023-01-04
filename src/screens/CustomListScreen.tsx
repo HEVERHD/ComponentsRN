@@ -3,6 +3,8 @@ import React from 'react';
 import HeaderTitle from '../components/HeaderTitle';
 import { styles } from '../theme/appTheme';
 import { ItemSeparator } from '../components/ItemSeparator';
+import { useContext } from 'react';
+import { ThemeContext } from '../context/themeContext/ThemeContext';
 
 interface Casas {
     casa: string;
@@ -88,6 +90,10 @@ const casas: Casas[] = [
 ];
 
 export default function CustomListScreen() {
+    const {
+        theme: { colors },
+    } = useContext(ThemeContext);
+
     return (
         <View style={{ ...styles.globalMargin, flex: 1 }}>
             <SectionList
@@ -100,7 +106,9 @@ export default function CustomListScreen() {
                         <HeaderTitle title="Total de elementos" />
                     </View>
                 )}
-                renderItem={({ item }) => <Text>{item}</Text>}
+                renderItem={({ item }) => (
+                    <Text style={{ color: colors.primary }}>{item}</Text>
+                )}
                 renderSectionHeader={({ section }) => (
                     <View>
                         <HeaderTitle title={section.casa} />
